@@ -1,0 +1,9 @@
+{
+    "color":"red",
+    "type":"apv"
+    "model": {
+        "brand": "Suzuki",
+        "year": 2019,
+        "colors": ["red", "gray", "white"]
+    }
+}
