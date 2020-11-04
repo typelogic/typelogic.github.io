@@ -96,3 +96,7 @@ Software Engineer
 NEC Telecom Software Philippines - Telecom -  Cebu, Philippines - 1998 - 2001
 - Prototype implementation of XML, SOAP, C++/COM/Corba for telecommunication application. 
 - Worked in sockets network programming.
+
+Others
+- Hobby interests on chess programming, algorithms, ELO rating
+- lichess.org rapid rating 2100+
