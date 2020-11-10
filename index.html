@@ -1,325 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <!-- <script src = "https://d3js.org/d3.v4.min.js"></script> -->
-        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
-        <div>
-            <h1>Which is better?</h1>
-            <p>Juicy and delicious</p>
-            <svg width = "200" height = "100">
-                <rect x = "0" y = "0" width = "100" height = "50" fill="blue"></rect>
-            </svg>
-            <svg width = "200" height = "100">
-                <rect x = "0" y = "0" width = "100" height = "50" fill="red"></rect>
-            </svg>
+        <div style="text-align: center;">
+            <span id="resumeviews" style="1px solid black;font-size:15px;" align="center"></span><br>
         </div>
-
-        <script>
-            // Ball object - multiple balls can be created by instantiating new objects
-            function Ball(svg, x, y, id, color, aoa, weight) {
-                this.posX = x; // cx
-                this.posY = y; // cy
-                this.color = color;
-                this.radius = weight; // radius and weight same
-                this.jumpSize = 1; // equivalent of speed default to 1
-                this.svg = svg; // parent SVG
-                this.id = id; // id of ball
-                this.aoa = aoa; // initial angle of attack
-                this.weight = weight;
-
-                if (!this.aoa)
-                    this.aoa = Math.PI / 7;
-                if (!this.weight)
-                    this.weight = 10;
-                this.radius = this.weight;
-
-                this.data = [this.id]; // allow us to use d3.enter()
-
-                var thisobj = this; // i like to use thisobj instead of this. this many times not reliable particularly handling evnet
-
-                // **** aoa is used only here -- earlier I was using to next move position.
-                // Now aoa and speed together is velocity
-                this.vx = Math.cos(thisobj.aoa) * thisobj.jumpSize; // velocity x
-                this.vy = Math.sin(thisobj.aoa) * thisobj.jumpSize; // velocity y
-                this.initialVx = this.vx;
-                this.initialVy = this.vy;
-                this.initialPosX = this.posX;
-                this.initialPosY = this.posY;
-
-                // when speed changes, go to initial setting
-                this.GoToInitialSettings = function (newjumpSize) {
-                    thisobj.posX = thisobj.initialPosX;
-                    thisobj.posY = thisobj.initialPosY;
-                    thisobj.vx = Math.cos(thisobj.aoa) * newjumpSize; // velocity x
-                    thisobj.vy = Math.sin(thisobj.aoa) * newjumpSize; // velocity y
-                    thisobj.Draw();
+        <span style="color:black;font-size:40px;">DEXTER APARICIO</span><br>
+        <span style="black:red;font-size:25px;">typelogic@pm.me</span><br>
+<hr>
+<p>PROGRAMMING</p>
+<ul>
+<li>Kotlin (Intermediate)</li>
+<li>Python (Advanced) </li>
+<li>Java (Advanced)</li>
+<li>Java Card (Advanced)</li>
+<li>C, C++ (Expert)</li>
+</ul>
+<hr>
+<p>FRAMEWORKS</p>
+<ul>
+<li>Spring (Intermediate)</li>
+<li>Javascript / HTML5 / D3.js (Intermediate)</li>
+<li>Android (Intermediate)</li>
+<li>Nix/NixOS (Intermediate)</li>
+<li>.NET/MFC/COM (Advanced)</li>
+<li>Smartcards (Advanced)</li>
+<li>DATABASE</li>
+<li>MySQL (Intermediate)</li>
+<li>MongoDB (Intermediate)</li>
+<li>ElasticSearch (Advanced)</li>
+<li>Redis (Expert)</li>
+</ul>
+<hr>
+<p>EXPERTISE</p>
+<ul>
+<li>Software Design</li>
+<li>Standards Protocols</li>
+<li>Java Card / GlobalPlatform</li>
+<li>Mifare NTAGxx, DESFire</li>
+<li>Microcontrollers</li>
+<li>Build Systems (make, cmake, maven, gradle)</li>
+</ul>
+<hr>
+<p><strong>Career Highlights</strong> </p>
+<ul>
+<li>7 years of experience in embedded systems development<br>Develop low level functional features for printer/scanner devices in multi-threaded embedded systems platforms Nucleus RTOS and embedded linux. Debugging of firmware and hardware issues for printer/scanner devices. Specialized in communication protocol specific features.</li>
+<li>7 years of experience in application software development<br>Develop and enhancement  of  desktop user interfaces and device drivers for printer/scanner and POS devices in Windows and Linux development environments. </li>
+<li>7 years of experience as Infrastructure Specialist support<br>Application middleware support for IBM’s Websphere products and backend AIX systems, Redhat Linux and virtualizations. Support on-premise datacenter setup and infrastructure environment needed by 300+ C++/Java software engineers.<br>1 year of overall experience working for international organizations</li>
+</ul>
+<p><strong>Education &amp; Certifications</strong><br>Bachelor Degree - Computer Engineering<br>University of San Carlos, Cebu Talamban, Philippines<br>5 years of study - Graduated in April 1996</p>
+<hr>
+<p><strong>Experience</strong></p>
+<p>Software Engineer<br>Newlogic - Consultancy - Cebu City, Philippines - 2019 - Present</p>
+<ul>
+<li>Experienced in NXP smartcard Java Card applet implementation using Global platform standard. Work in SCP02 GP211 secure channel protocol, biometric match in card using NXP Java Card biometric package, ECDSA signature  applet for Etherium signing and tested in Ganache, Java Card applet DESFire emulation and Mifare DESFire card AES security configuration.<br>Design a C++ biometric face recognition shared library for mobile Android and Spring Boot server java applications. </li>
+<li>Worked in MOSIP/print integration solution and biometric solutions.</li>
+</ul>
+<p>Software Engineer<br>National Cash Register (NCR) - Point Of Sales Terminals - Cebu, Philippines - 2018 - 2019</p>
+<ul>
+<li>Worked in embedded Linux touch screen solutions using Poco C++, Windows Visual Studio.</li>
+<li>Worked in WindowsCE platform ElasticSearch beats for centralized logging.</li>
+<li>Worked in porting WindowsCE C++ codebase into Linux platform.</li>
+</ul>
+<p>Software Developer<br>SIEM Startup - Consultancy - Cebu, Philippines - 2017 - 2018</p>
+<ul>
+<li>Worked in SNMP network events correlation solution for custom embedded routers.</li>
+<li>Prototyped a containerized Docker solution.<br>Using ElasticSearch, Python celery, Redis, Flask and Bokeh visualization.</li>
+</ul>
+<p>Infrastructure Specialist<br>IBM Solutions - Global Support Services - Cebu, Philippines - 2013 - 2017</p>
+<ul>
+<li>Support IBM Websphere middleware products and backend AIX operations.</li>
+<li>Worked in HMC, Bluecoat, Datapower, LDAP, Softlayer, Bluemix, DB2, MQ.</li>
+<li>Websphere Business Process Management (BPM) developer. </li>
+<li>Converted legacy C ETL application into BPM Java. </li>
+</ul>
+<p>Lab Support<br>Tieto Global Oy - Telecom - Cebu, Philippines - 2012 - 2013</p>
+<ul>
+<li>Setup, support an on-premise data center to support 300+ C++, Java, Python developers development platforms.</li>
+<li>Responsibilities included network infrastructures, storage capacity and replications, SVN version control, and on-premise data center monitoring.</li>
+<li>Technologies used: HP-Proliant servers, Xen virtualization.</li>
+</ul>
+<p>Infrastructure Specialist<br>IBM Solutions - Global Support Services - Cebu, Philippines - 2010 - 2012</p>
+<ul>
+<li>Support IBM OCPM product. </li>
+<li>Worked in backend AIX cron scripts, and ETL data processing. </li>
+<li>Converted some critical scripts into C init daemon. </li>
+</ul>
+<p>Software Engineer<br>Lexmark R&amp;D - Print/Scan Hardware Devices - Cebu, Philippines - 2001 - 2010</p>
+<ul>
+<li>Worked in Linux, Windows device drivers for Lexmark printer products.</li>
+<li>Worked in Linux, Windows desktop graphical user interfaces for Lexmark printer products.</li>
+<li>Worked in Nucleus RTOS firmware communication subsystems (JTAG, TCP/IP, Bluetooth).</li>
+<li>Worked in embedded Linux printer diagnostic subsystems.</li>
+<li>Worked in communication subsystems: wired serial/parallel/USB port, infrared and wireless </li>
+</ul>
+<p>Software Engineer<br>NEC Telecom Software Philippines - Telecom -  Cebu, Philippines - 1998 - 2001</p>
+<ul>
+<li>Prototype implementation of XML, SOAP, C++/COM/Corba for telecommunication application. </li>
+<li>Worked in sockets network programming.</li>
+</ul>
+<p>Others</p>
+<ul>
+<li>Hobby interests on chess programming, algorithms, ELO rating</li>
+<li>lichess.org rapid rating 2100+</li>
+</ul>
+    <script>
+        /* honor the fundamental forces of computing */
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://cors-anywhere.herokuapp.com/https://eigenfield.herokuapp.com/visit",
+                type: "GET",
+                success: function (result) {
+                    console.log(result);
+                    document.getElementById("resumeviews").innerHTML = result;
+                },
+                error: function (error) {
+                    console.log(error);
                 }
-
-                this.Draw = function () {
-                    var svg = thisobj.svg;
-                    var ball = svg.selectAll('#' + thisobj.id)
-                                .data(thisobj.data)
-                            ;
-                    ball.enter()
-                        .append("circle")
-                        .attr({"id" : thisobj.id, 'class' : 'ball', 'r' : thisobj.radius, 'weight' : thisobj.weight})
-                        .style("fill", thisobj.color)
-                        ;
-                    ball
-                        //.transition()//.duration(50)
-                        .attr("cx", thisobj.posX)
-                        .attr("cy", thisobj.posY)
-                    ;
-                    // intersect ball is used to show collision effect - every ball has it's own intersect ball
-                    var intersectBall = ball.enter()
-                                        .append('circle')
-                                        .attr({ 'id': thisobj.id + '_intersect', 'class': 'intersectBall' });
-                }
-
-                this.Move = function () {
-                    var svg = thisobj.svg;
-
-                    //thisobj.posX += Math.cos(thisobj.aoa) * thisobj.jumpSize;
-                    //thisobj.posY += Math.sin(thisobj.aoa) * thisobj.jumpSize;
-
-                    thisobj.posX += thisobj.vx;
-                    thisobj.posY += thisobj.vy;
-
-                    if (parseInt(svg.attr('width')) <= (thisobj.posX + thisobj.radius)) {
-                        thisobj.posX = parseInt(svg.attr('width')) - thisobj.radius - 1;
-                        thisobj.aoa = Math.PI - thisobj.aoa;
-                        thisobj.vx = -thisobj.vx;
-                    }
-
-                    if ( thisobj.posX < thisobj.radius) {
-                        thisobj.posX = thisobj.radius+1;
-                        thisobj.aoa = Math.PI - thisobj.aoa;
-                        thisobj.vx = -thisobj.vx;
-                    }
-
-                    if (parseInt(svg.attr('height')) < (thisobj.posY + thisobj.radius)) {
-                        thisobj.posY = parseInt(svg.attr('height')) - thisobj.radius - 1;
-                        thisobj.aoa = 2 * Math.PI - thisobj.aoa;
-                        thisobj.vy = -thisobj.vy;
-                    }
-
-                    if (thisobj.posY < thisobj.radius) {
-                        thisobj.posY = thisobj.radius+1;
-                        thisobj.aoa = 2 * Math.PI - thisobj.aoa;
-                        thisobj.vy = -thisobj.vy;
-                    }
-
-                    // **** NOT USING AOA except during initilization. Just left this for future reference *****
-                    if (thisobj.aoa > 2 * Math.PI)
-                        thisobj.aoa = thisobj.aoa - 2 * Math.PI;
-                    if (thisobj.aoa < 0)
-                        thisobj.aoa = 2 * Math.PI + thisobj.aoa;
-
-                    thisobj.Draw();
-                }
-            }
-
-            function CheckCollision(ball1, ball2) {
-                var absx = Math.abs(parseFloat(ball2.posX) - parseFloat(ball1.posX));
-                var absy = Math.abs(parseFloat(ball2.posY) - parseFloat(ball1.posY));
-
-                // find distance between two balls.
-                var distance = (absx * absx) + (absy * absy);
-                distance = Math.sqrt(distance);
-                // check if distance is less than sum of two radius - if yes, collision
-                if (distance < (parseFloat(ball1.radius) + parseFloat(ball2.radius))) {
-                    return true;
-                }
-                return false;
-            }
-
-            var balls = []; // global array representing balls
-            var color = d3.scale.category20();
-
-            //courtsey thanks to several internet sites for formulas
-            //detect collision, find intersecting point and set new speed+direction for each ball based on weight (weight=radius)
-            function ProcessCollision(ball1, ball2) {
-
-                if (ball2 <= ball1)
-                    return;
-                if (ball1 >= (balls.length-1) || ball2 >= balls.length )
-                    return;
-
-                ball1 = balls[ball1];
-                ball2 = balls[ball2];
-
-                if ( CheckCollision(ball1, ball2) ) {
-                    // intersection point
-                    var interx = ((ball1.posX * ball2.radius) + ball2.posX * ball1.radius)
-                    / (ball1.radius + ball2.radius);
-                    var intery = ((ball1.posY * ball2.radius) + ball2.posY  * ball1.radius)
-                    / (ball1.radius + ball2.radius);
-
-                    // show collision effect for 500 miliseconds
-                    var intersectBall = svg.select('#' + ball1.id + '_intersect');
-                    intersectBall.attr({ 'cx': interx, 'cy': intery, 'r': 5 ,'fill': 'black' })
-                                .transition()
-                                .duration(500)
-                                .attr('r', 0);
-
-                    // calculate new velocity of each ball.
-                    var vx1 = (ball1.vx * (ball1.weight - ball2.weight)
-                        + (2 * ball2.weight * ball2.vx )) / (ball1.weight + ball2.weight);
-                    var vy1 = (ball1.vy * (ball1.weight - ball2.weight)
-                        + (2 * ball2.weight * ball2.vy)) / (ball1.weight + ball2.weight);
-                    var vx2 = (ball2.vx * (ball2.weight - ball1.weight)
-                        + (2 * ball1.weight * ball1.vx)) / (ball1.weight + ball2.weight);
-                    var vy2 = (ball2.vy * (ball2.weight - ball1.weight)
-                        + (2 * ball1.weight * ball1.vy)) / (ball1.weight + ball2.weight);
-
-                    //set velocities for both balls
-                    ball1.vx = vx1;
-                    ball1.vy = vy1;
-                    ball2.vx = vx2;
-                    ball2.vy = vy2;
-
-                    //ensure one ball is not inside others. distant apart till not colliding
-                    while (CheckCollision(ball1, ball2)) {
-                        ball1.posX += ball1.vx;
-                        ball1.posY += ball1.vy;
-
-                        ball2.posX += ball2.vx;
-                        ball2.posY += ball2.vy;
-                    }
-                    ball1.Draw();
-                    ball2.Draw();
-                }
-            }
-
-            function Initialize(containerId) {
-                var height = document.getElementById(containerId).clientHeight;
-                var width = document.getElementById(containerId).clientWidth;
-                gContainerId = containerId;
-                gCanvasId = containerId + '_canvas';
-                gTopGroupId = containerId + '_topGroup';
-                var svg = d3.select("#" + containerId).append("svg")
-                    .attr("id", gCanvasId)
-                    .attr("width", width)
-                    .attr("height", height)
-                    .append("g")
-                    .attr("id", gTopGroupId)
-                    .attr("x", 0)
-                    .attr("y", 0)
-                    .attr("width", width)
-                    .attr("height", height)
-                    .style("fill", "none")
-                //.attr("transform", "translate(" + 1 + "," + 1 + ")")
-                ;
-
-                balls.push(new Ball(svg, 501, 101, 'n1', 'red', Math.PI / 6));
-                balls.push(new Ball(svg, 51, 31, 'n2', 'green', Math.PI / 3, 20));
-                balls.push(new Ball(svg, 201, 201, 'n3', 'yellow', Math.PI / 9, 90));
-                balls.push(new Ball(svg, 91, 31, 'n4', 'orange', Math.PI / 2, 15));
-                balls.push(new Ball(svg, 201, 21, 'n5', 'pink', Math.PI + Math.PI / 4, 15));
-                balls.push(new Ball(svg, 401, 41, 'n6', 'blue', Math.PI + Math.PI / 7, 25));
-
-                for (var i = 0; i < balls.length; ++i) {
-                    balls[i].Draw();
-                }
-                return svg;
-            }
-
-            var startStopFlag = null;
-            function StartStopGame() {
-                if (startStopFlag == null) {
-                    d3.timer(function () {
-                        for (var i = 0; i < balls.length; ++i) {
-                            var r = balls[i].Move();
-                            for (var j = i + 1; j < balls.length; ++j) {
-                                ProcessCollision(i, j);
-                            }
-                        }
-                        if (startStopFlag == null)
-                            return true;
-                        else
-                            return false;
-                    }, 500);
-                    startStopFlag = 1;
-                    document.getElementById('startStop').innerHTML = 'Stop';
-                }
-                else {
-                    startStopFlag = null;
-                    document.getElementById('startStop').innerHTML = 'Start';
-                }
-            }
-            // I always like to handle ESC key
-            d3.select('body')
-                    .on('keydown', function () {
-                        if (balls.length == 0)
-                            return;
-                        console.log(d3.event);
-                        if (d3.event.keyCode == 27) { // if ESC key - toggle start stop
-                            StartStopGame();
-                        }
-                    });
-
-            function OnSpeedChange() {
-                var o = document.getElementById('speed');
-                if (startStopFlag != null)
-                    startStopFlag = null; // by setting startStopFlag to null, callback of d3.timer will return true and animation will stop
-
-                setTimeout(function () { // go to initial position set new speed (ideally should not go to initial position)
-                    for (var i = 0; i < balls.length; ++i) {
-                        var o = document.getElementById('speed');
-                        newjumpSize = o.options[o.selectedIndex].value;
-                        balls[i].GoToInitialSettings(parseInt(newjumpSize));
-                    }
-                    setTimeout(function () {
-                        StartStopGame();
-                    }, 1000);
-                }, 500);
-            }
-
-            function OnNumberOfBallsChanged() {
-                var o = document.getElementById('numberOfBalls');
-                numberOfBalls = o.options[o.selectedIndex].value;
-                balls = balls.slice(0, 6);
-
-                d3.selectAll('.ball').remove();
-                //keep pushing as many balls you want..
-                for (var i = 6; i < numberOfBalls; ++i) {
-                    balls.push(new Ball(svg, 101, 101, 'n'+(i+1).toString(), color(i), Math.PI / (i+1), (i%2)==0?10 : (10+i)));
-                }
-            }
-
-        </script>
-
-        <div id="mainDiv" style="width:640px; height:280px">
-            <!--
-            <div id="drawAreaOuter" style="width:100%; height:100%;  ">
-                <div id="menuTop" >
-                    <a id="startStop" href="javascript:StartStopGame()">Start</a> |
-            Speed :
-            <select id='speed' onchange="OnSpeedChange()">
-                <option value="1" selected="selected">Slow</option>
-                <option value="3" >Medium</option>
-                <option value="5">Fast</option>
-            </select> | 
-            Number of Balls :
-            <select id='numberOfBalls' onchange="OnNumberOfBallsChanged()">
-                <option value="5" selected="selected">6</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-            </select> 
-            </div> -->
-            <div id="drawArea" style="width:100%; height:100%; border:1px solid gray"></div> 
-        </div>
-        <!--
-        </div>
-        -->
-
-        <script>
-            var svg = Initialize('drawArea');
-            StartStopGame();
-        </script>
-    </body>
+            })
+        })
+    </script>
+</body>
 </html>
