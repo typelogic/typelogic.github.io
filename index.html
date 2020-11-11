@@ -108,20 +108,35 @@
 <li>lichess.org rapid rating 2100+</li>
 </ul>
     <script>
-        /* honor the fundamental forces of computing */
         $(document).ready(function() {
             $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/https://eigenfield.herokuapp.com/visit",
+                url: "http://ip.jsontest.com",
                 type: "GET",
                 success: function (result) {
                     console.log(result);
-                    document.getElementById("resumeviews").innerHTML = result;
+                    //document.getElementById("x").innerHTML = result["ip"];
+                    /* test spring boot url handling */
+                    $(document).ready(function() {
+                    	$.ajax({
+                    		url: "https://cors-anywhere.herokuapp.com/https://eigenfield.herokuapp.com/visit/" + result["ip"],
+                    		type: "GET",
+                    		success: function (result) {
+                    			console.log(result);
+                    			document.getElementById("resumeviews").innerHTML = result;
+                    		},
+                    		error: function (error) {
+                    			console.log(error);
+                    		}
+                    	})
+                    })
+                    /////////////
                 },
                 error: function (error) {
                     console.log(error);
                 }
             })
         })
+
     </script>
 </body>
 </html>
